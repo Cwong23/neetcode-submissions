@@ -1,0 +1,14 @@
+class Solution:
+    def divideArray(self, nums: List[int]) -> bool:
+        nums.sort()
+
+        if len(nums) % 2 != 0:
+            return False
+
+        i = 0
+        while i < len(nums):
+            if nums[i] != nums[i+1]:
+                return False
+            i+=2
+
+        return True
